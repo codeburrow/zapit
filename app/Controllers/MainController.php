@@ -18,25 +18,17 @@ class MainController extends Controller
         }
     }
 
-    public function index($result=null)
+    public function index()
     {
-        if ($result == null) {
+        include __DIR__ . "/../Services/phpqrcode/qrlib.php";
 
-            include __DIR__ . "/../Services/phpqrcode/qrlib.php";
+        $id = 2345;
+        $eid = 23543254;
 
-            $backColor = 0xFFFF00;
-            $foreColor = 0xFF00FF;
+        // create a QR Code with this text and display it
+        QRcode::png("id:$id eid:$eid", "img/qr.png", "L", 4, 4);
 
-            $id = 2345;
-            $eid = 23543254;
-
-            // create a QR Code with this text and display it
-            QRcode::png("id:$id eid:$eid", "img/qr.png", "L", 4, 4, false, $backColor, $foreColor);
-
-            echo $this->twig->render('index.twig');
-        } else {
-            echo $this->twig->render('index.twig', array('result'=>$result));
-        }
+        echo $this->twig->render('index.twig');
     }
 
 }
