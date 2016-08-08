@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4ed2c1a408561529c6b7949e0825444f",
-    "content-hash": "4b0aac6f3ccbdf2522cc9761c3447f62",
+    "hash": "07dfce57cdb2a9f2680b7c29d89ec125",
+    "content-hash": "34106c8d880370397b7e4cdbf79f0fdf",
     "packages": [
         {
             "name": "ccampbell/chromephp",
@@ -222,6 +222,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
+        "ext-gd": "*",
         "php": "^7.0.0"
     },
     "platform-dev": []

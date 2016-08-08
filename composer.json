@@ -9,6 +9,7 @@
     }
   ],
   "require": {
+    "ext-gd": "*",
     "php": "^7.0.0",
     "twig/twig": "~1.0",
     "swiftmailer/swiftmailer": "^5.4",
