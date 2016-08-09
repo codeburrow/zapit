@@ -22,13 +22,18 @@ class MainController extends Controller
     {
         include __DIR__ . "/../Services/phpqrcode/qrlib.php";
 
-        $id = 2345;
-        $eid = 23543254;
+        $id = $_GET['id'];
+        $eid = $_GET['eid'];
 
         // create a QR Code with this text and display it
-        QRcode::png("id:$id eid:$eid", "img/qr.png", "L", 4, 4);
+       echo QRcode::png("id:$id eid:$eid");
 
-        echo $this->twig->render('index.twig');
+//        echo $this->twig->render('index.twig');
+    }
+
+    public function test()
+    {
+        echo $this->twig->render('test.twig');
     }
 
 }

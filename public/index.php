@@ -14,6 +14,8 @@ $router = new Router\Router();
 /******** GET ********/
 //Public
 $router->get('/', 'MainController', 'index');
+//$router->get('/?id=[-\w\d\]+&eid=[-\w\d\]+', 'MainController', 'index');
+$router->get('/test', 'MainController', 'test');
 //$router->get('/professor/[-\w\d\?\!\.]+', 'MainController', 'professor');
 
 //Admin
