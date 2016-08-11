@@ -14,8 +14,11 @@ $router = new Router\Router();
 /******** GET ********/
 //Public
 $router->get('/', 'MainController', 'index');
+$router->get('/about', 'MainController', 'about');
+$router->get('/generate-qr-code', 'MainController', 'generate_qr_code');
 //$router->get('/?id=[-\w\d\]+&eid=[-\w\d\]+', 'MainController', 'index');
 $router->get('/test', 'MainController', 'test');
+$router->get('/showWidget', 'MainController', 'showWidget');
 //$router->get('/professor/[-\w\d\?\!\.]+', 'MainController', 'professor');
 
 //Admin

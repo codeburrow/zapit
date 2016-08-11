@@ -20,15 +20,30 @@ class MainController extends Controller
 
     public function index()
     {
+        echo "Life is a bitch. Deal with it.";
+    }
+    
+    public function generate_qr_code()
+    {
         include __DIR__ . "/../Services/phpqrcode/qrlib.php";
 
-        $id = $_GET['id'];
-        $eid = $_GET['eid'];
+        //Retrieve parameters from db
+        $id = 123;
+        $eid = 345;
 
         // create a QR Code with this text and display it
-       echo QRcode::png("id:$id eid:$eid");
+        echo QRcode::png("id:$id eid:$eid");
 
-//        echo $this->twig->render('index.twig');
+    }
+
+    public function showWidget()
+    {
+        echo $this->twig->render('showWidget.twig');
+    }
+
+    public function about()
+    {
+        echo $this->twig->render('about.twig');
     }
 
     public function test()
